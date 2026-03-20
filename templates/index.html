@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Path Simulator</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyberDark: '#0a0a0f',
+                        cyberNeonP: '#00f3ff',
+                        cyberNeonS: '#ff00ea'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="dark bg-cyberDark text-gray-200 transition-colors duration-300 min-h-screen flex flex-col items-center">
+
+    <!-- Background Grid Effect -->
+    <div class="fixed inset-0 pointer-events-none" style="background-image: linear-gradient(rgba(0, 243, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 243, 255, 0.05) 1px, transparent 1px); background-size: 30px 30px; z-index: -1;"></div>
+
+    <!-- Header Components -->
+    <header class="w-full max-w-6xl flex justify-between items-center p-6 border-b border-gray-800">
+        <h1 class="text-3xl font-bold orbitron neon-text-primary tracking-wider">
+            <i class="fa-solid fa-microchip"></i> NXM Career AI
+        </h1>
+        <div class="flex gap-4 items-center">
+            <button id="themeToggle" class="text-xl text-gray-400 hover:text-cyberNeonP transition">
+                <i class="fa-solid fa-sun"></i>
+            </button>
+            <button id="showSavedBtn" class="cyber-btn px-4 py-2 rounded">
+                <i class="fa-regular fa-bookmark"></i> Saved
+            </button>
+        </div>
+    </header>
+
+    <main class="w-full max-w-6xl flex flex-col md:flex-row gap-8 p-6 mt-8">
+        
+        <!-- Left Column: Inputs -->
+        <div class="w-full md:w-1/3 flex flex-col gap-6">
+            
+            <div class="glass-card p-6 rounded-xl relative overflow-hidden">
+                <h2 class="text-xl font-bold mb-4 orbitron"><i class="fa-solid fa-user-astronaut text-cyberNeonP"></i> Profile Input</h2>
+                
+                <div class="mb-6">
+                    <label class="block text-sm text-gray-400 mb-2">Upload Resume (PDF)</label>
+                    <div class="relative">
+                        <input type="file" id="resumeUpload" accept=".pdf" class="hidden">
+                        <button onclick="document.getElementById('resumeUpload').click()" class="w-full py-3 border border-dashed border-gray-600 rounded bg-gray-900 hover:border-cyberNeonP transition text-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-file-pdf text-red-400"></i> Auto-Extract Skills
+                        </button>
+                    </div>
+                    <p id="uploadStatus" class="text-xs mt-2 text-cyberNeonP hidden">Extracting...</p>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-sm text-gray-400 mb-2">Your Skills (Hit Enter)</label>
+                    <div class="tag-input-container" id="tagContainer">
+                        <!-- Tags will be dynamically inserted here -->
+                        <input type="text" id="skillInput" placeholder="e.g. python, react, aws" autocomplete="off">
+                    </div>
+                </div>
+
+                <button id="scanBtn" class="cyber-btn w-full py-3 text-lg rounded shadow-lg group">
+                    <i class="fa-solid fa-radar group-hover:animate-spin"></i> SCAN MISSIONS
+                </button>
+            </div>
+
+            <!-- Trending / Quick Actions -->
+            <div class="glass-card p-6 rounded-xl">
+                 <h2 class="text-xl font-bold mb-4 orbitron"><i class="fa-solid fa-fire text-cyberNeonS"></i> Trending Skills</h2>
+                 <div class="flex flex-wrap gap-2">
+                     <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded cursor-pointer hover:bg-cyberNeonP hover:text-black transition" onclick="addSuggestedSkill('Python')">Python</span>
+                     <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded cursor-pointer hover:bg-cyberNeonP hover:text-black transition" onclick="addSuggestedSkill('Machine Learning')">Machine Learning</span>
+                     <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded cursor-pointer hover:bg-cyberNeonP hover:text-black transition" onclick="addSuggestedSkill('React')">React</span>
+                     <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded cursor-pointer hover:bg-cyberNeonP hover:text-black transition" onclick="addSuggestedSkill('Docker')">Docker</span>
+                     <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded cursor-pointer hover:bg-cyberNeonP hover:text-black transition" onclick="addSuggestedSkill('AWS')">AWS</span>
+                 </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Results -->
+        <div class="w-full md:w-2/3 relative" id="resultsArea">
+            
+            <!-- Loading Overlay -->
+            <div id="loadingOverlay" class="absolute inset-0 bg-cyberDark/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center z-10 hidden border border-cyberNeonP">
+                <div class="scan-line"></div>
+                <div class="text-4xl neon-text-primary mb-4 animate-pulse"><i class="fa-solid fa-satellite-dish"></i></div>
+                <h3 class="orbitron text-xl font-bold tracking-widest text-white mb-2" id="loadingText">SCANNING NETWORK...</h3>
+                <p class="text-cyberNeonP text-sm font-mono mt-2" id="loadingSubtext">[ Initialize Neural Link ]</p>
+            </div>
+
+            <!-- Results Headline -->
+            <div class="flex justify-between items-center mb-6 hidden" id="resultsHeader">
+                <h2 class="text-2xl font-bold orbitron"><i class="fa-solid fa-crosshairs text-cyberNeonP"></i> Target Roles Found</h2>
+                <button id="exportBtn" class="text-sm text-gray-400 hover:text-white transition"><i class="fa-solid fa-download"></i> Export</button>
+            </div>
+
+            <!-- Job Cards Grid -->
+            <div id="jobCardsContainer" class="grid grid-cols-1 lg:grid-cols-2 gap-6 pb-20">
+                <!-- Empty State -->
+                <div class="col-span-1 lg:col-span-2 flex flex-col items-center justify-center py-20 opacity-50">
+                    <i class="fa-brands fa-space-awesome text-6xl mb-4 text-gray-600"></i>
+                    <p class="text-lg orbitron">Awaiting input parameters...</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

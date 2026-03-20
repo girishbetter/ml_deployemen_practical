@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;600&display=swap');
+
+:root {
+  --bg-dark: #0a0a0f;
+  --bg-light: #f0f0f5;
+  --text-dark: #e0e0e0;
+  --text-light: #1a1a2e;
+  --primary-neon: #00f3ff;
+  --secondary-neon: #ff00ea;
+  --card-bg-dark: rgba(20, 20, 30, 0.7);
+  --card-bg-light: rgba(255, 255, 255, 0.7);
+  --success: #00ff66;
+  --warning: #ffcc00;
+  --danger: #ff3366;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  overflow-x: hidden;
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.light {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+h1, h2, h3, h4, h5, h6, .orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Neon Text Effects */
+.neon-text-primary {
+  text-shadow: 0 0 5px var(--primary-neon), 0 0 10px var(--primary-neon), 0 0 20px var(--primary-neon);
+  color: #fff;
+}
+
+.neon-text-secondary {
+  text-shadow: 0 0 5px var(--secondary-neon), 0 0 10px var(--secondary-neon), 0 0 20px var(--secondary-neon);
+  color: #fff;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  background: var(--card-bg-dark);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+body.light .glass-card {
+  background: var(--card-bg-light);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+/* Cyber Button */
+.cyber-btn {
+  background: transparent;
+  color: var(--primary-neon);
+  border: 2px solid var(--primary-neon);
+  box-shadow: 0 0 10px inset var(--primary-neon), 0 0 10px var(--primary-neon);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-btn:hover {
+  background: var(--primary-neon);
+  color: #000;
+  box-shadow: 0 0 20px inset var(--primary-neon), 0 0 20px var(--primary-neon);
+}
+
+/* Circular Progress Bar */
+.circular-chart {
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
+  max-height: 250px;
+}
+.circle-bg {
+  fill: none;
+  stroke: rgba(255,255,255,0.1);
+  stroke-width: 3.8;
+}
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  transition: stroke-dasharray 1s ease-out;
+}
+.percentage {
+  fill: currentColor;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle;
+  font-weight: bold;
+}
+
+/* Colors for score */
+.color-green { stroke: var(--success); }
+.color-yellow { stroke: var(--warning); }
+.color-red { stroke: var(--danger); }
+.text-green { color: var(--success); }
+.text-yellow { color: var(--warning); }
+.text-red { color: var(--danger); }
+
+/* Card Flip */
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+  height: 400px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+  overflow-y: auto;
+  text-align: left;
+}
+
+/* Tag Input */
+.tag-input-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid rgba(0, 243, 255, 0.5);
+  border-radius: 0.5rem;
+  min-height: 50px;
+  background: rgba(0,0,0,0.3);
+}
+.tag-input-container input {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  color: inherit;
+  outline: none;
+  min-width: 120px;
+}
+.tag {
+  background: rgba(0, 243, 255, 0.1);
+  border: 1px solid var(--primary-neon);
+  color: var(--primary-neon);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+.tag span.remove-tag {
+  cursor: pointer;
+  font-weight: bold;
+}
+.tag span.remove-tag:hover {
+  color: #fff;
+}
+
+/* Loading Animation */
+.scan-line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--primary-neon);
+  box-shadow: 0 0 10px var(--primary-neon);
+  animation: scan 2s linear infinite;
+  opacity: 0.8;
+  z-index: 50;
+  pointer-events: none;
+}
+
+@keyframes scan {
+  0% { top: -10%; }
+  100% { top: 110%; }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 243, 255, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 243, 255, 0.6);
+}

@@ -1,0 +1,120 @@
+job_title,description,salary_range,market_demand
+Data Analyst,python sql data visualization statistics tableau power bi excel reporting analytics,$102k - $145k,Low
+Machine Learning Engineer,python machine learning tensorflow deep learning neural networks pytorch model training deployment,$61k - $104k,High
+Web Developer,html css javascript react frontend responsive design ui ux bootstrap,$115k - $140k,High
+Backend Developer,python django flask api backend rest microservices database server,$148k - $188k,High
+Data Scientist,python pandas numpy machine learning data analysis statistics modeling visualization,$112k - $135k,Medium
+Software Engineer,java c++ algorithms system design object oriented programming debugging testing,$132k - $153k,Low
+DevOps Engineer,docker kubernetes ci cd jenkins aws azure cloud deployment automation infrastructure,$158k - $198k,High
+Cloud Architect,aws azure google cloud architecture scalability microservices serverless cloud computing,$62k - $92k,High
+Full Stack Developer,html css javascript python react node.js mongodb express full stack development,$113k - $161k,High
+Mobile App Developer,android ios swift kotlin react native flutter mobile development ui design,$158k - $200k,High
+Cybersecurity Analyst,network security vulnerability assessment penetration testing firewall encryption threat analysis,$90k - $139k,High
+Database Administrator,sql mysql postgresql oracle database management indexing optimization backup recovery,$118k - $141k,High
+AI Research Scientist,artificial intelligence deep learning reinforcement learning natural language processing computer vision research,$88k - $124k,Low
+NLP Engineer,natural language processing text classification sentiment analysis transformers bert gpt tokenization,$143k - $174k,High
+Computer Vision Engineer,image recognition object detection opencv convolutional neural networks image processing segmentation,$151k - $173k,High
+Blockchain Developer,solidity smart contracts ethereum blockchain decentralized applications web3 cryptocurrency,$101k - $126k,High
+Game Developer,unity unreal engine c# c++ 3d modeling game design physics simulation,$108k - $143k,High
+Embedded Systems Engineer,c c++ microcontrollers rtos firmware iot hardware programming sensors,$114k - $143k,High
+Network Engineer,networking tcp ip routing switching cisco firewall vpn load balancing,$111k - $150k,Medium
+Systems Administrator,linux windows server administration shell scripting monitoring patch management,$132k - $161k,High
+QA Engineer,testing automation selenium test cases quality assurance regression testing bug tracking,$143k - $178k,High
+Product Manager,product strategy roadmap agile user stories stakeholder management prioritization backlog,$153k - $182k,Medium
+UI/UX Designer,figma sketch wireframing prototyping user research usability testing interaction design,$154k - $179k,High
+Business Analyst,requirements gathering process modeling stakeholder communication data analysis documentation,$97k - $145k,High
+Project Manager,project planning risk management agile scrum resource allocation timeline management,$94k - $126k,Medium
+Technical Writer,documentation api documentation user guides content strategy markdown technical communication,$111k - $151k,Medium
+Data Engineer,etl data pipelines apache spark hadoop airflow data warehousing sql big data,$69k - $92k,High
+Site Reliability Engineer,monitoring alerting incident response automation scalability reliability infrastructure,$93k - $122k,High
+Security Engineer,application security code review vulnerability scanning authentication authorization compliance,$107k - $141k,Medium
+Robotics Engineer,ros python c++ robot design control systems sensor fusion path planning automation,$63k - $105k,High
+AR/VR Developer,augmented reality virtual reality 3d rendering unity unreal engine spatial computing,$111k - $140k,High
+IoT Developer,internet of things sensors mqtt embedded systems edge computing raspberry pi arduino,$74k - $115k,High
+Bioinformatics Scientist,genomics proteomics python r statistical analysis biological data sequencing,$87k - $116k,High
+Quantitative Analyst,quantitative finance python r statistics risk modeling financial modeling time series,$62k - $97k,High
+Solutions Architect,enterprise architecture system integration cloud migration scalability design patterns,$68k - $94k,High
+API Developer,rest graphql api design microservices swagger openapi authentication rate limiting,$128k - $174k,High
+Platform Engineer,kubernetes infrastructure automation terraform platform development developer tools ci cd,$66k - $113k,High
+Machine Learning Ops Engineer,mlops model deployment monitoring docker kubernetes pipeline automation model management,$157k - $203k,Medium
+Natural Language Processing Researcher,nlp deep learning transformers attention mechanisms language models text generation,$132k - $161k,High
+Frontend Engineer,react angular vue.js typescript css html responsive design web performance,$67k - $87k,Medium
+React Developer,react redux hooks javascript typescript component design state management frontend,$137k - $161k,Medium
+Angular Developer,angular typescript rxjs ngrx component architecture frontend web development,$141k - $185k,High
+Vue.js Developer,vue.js vuex composition api javascript frontend web development reactive programming,$141k - $173k,Low
+Node.js Developer,node.js express.js javascript typescript api development server-side mongodb,$78k - $120k,Low
+Python Developer,python flask django rest api automation scripting data processing testing,$121k - $156k,Low
+Java Developer,java spring boot microservices hibernate maven enterprise applications object oriented,$117k - $151k,Medium
+Go Developer,golang concurrency microservices api development distributed systems performance cloud native,$126k - $176k,Low
+Rust Developer,rust systems programming memory safety concurrency performance embedded systems,$135k - $161k,Low
+Ruby Developer,ruby rails web development api database testing agile full stack,$141k - $190k,Medium
+PHP Developer,php laravel mysql web development backend cms api rest,$113k - $150k,Medium
+Swift Developer,swift ios xcode uikit core data mobile app development interface design,$114k - $163k,High
+Kotlin Developer,kotlin android jetpack compose coroutines mobile app development material design,$91k - $117k,High
+Salesforce Developer,salesforce apex visualforce lightning crm integration cloud platform,$143k - $175k,Medium
+SAP Consultant,sap erp abap s4hana business process integration modules configuration,$148k - $182k,Medium
+ETL Developer,etl data integration informatica talend sql data warehousing data migration,$133k - $179k,High
+Tableau Developer,tableau data visualization dashboards reporting analytics sql business intelligence,$96k - $121k,Low
+Power BI Developer,power bi dax m query data modeling dashboards reporting analytics,$130k - $174k,High
+Hadoop Developer,hadoop mapreduce hdfs hive pig spark big data processing java,$159k - $197k,High
+Spark Developer,apache spark pyspark scala data processing big data distributed computing streaming,$144k - $192k,High
+Elasticsearch Engineer,elasticsearch kibana logstash elk stack search analytics indexing,$111k - $153k,High
+AWS Solutions Architect,aws ec2 s3 lambda rds cloudformation architecture serverless,$130k - $172k,High
+Azure Cloud Engineer,azure virtual machines blob storage functions devops cloud architecture,$97k - $121k,High
+GCP Cloud Engineer,google cloud platform compute engine cloud functions bigquery kubernetes,$93k - $130k,High
+Terraform Engineer,terraform infrastructure as code aws azure gcp automation provisioning,$73k - $97k,High
+Ansible Engineer,ansible automation configuration management devops infrastructure playbooks,$106k - $149k,Medium
+Docker Specialist,docker containerization docker compose registry image management deployment,$147k - $170k,High
+Kubernetes Engineer,kubernetes container orchestration helm pods services deployment scaling,$88k - $137k,High
+Jenkins Engineer,jenkins ci cd pipelines automation integration testing build deployment,$60k - $102k,Medium
+GitHub Actions Developer,github actions ci cd workflows yaml automation devops pipelines,$160k - $196k,Medium
+Penetration Tester,penetration testing ethical hacking vulnerability exploitation kali linux security assessment,$78k - $106k,High
+SOC Analyst,security operations monitoring siem incident response threat hunting log analysis,$91k - $131k,Low
+Malware Analyst,malware analysis reverse engineering threat intelligence forensics sandboxing,$131k - $175k,Medium
+Cryptography Engineer,cryptography encryption protocols security key management hashing signatures,$128k - $169k,Medium
+Compliance Analyst,regulatory compliance gdpr hipaa risk assessment audit policy documentation,$82k - $132k,Medium
+Data Privacy Officer,data privacy gdpr ccpa data governance risk assessment privacy frameworks,$145k - $193k,Medium
+Unity Developer,unity c# game development 3d 2d game design scripting physics,$100k - $146k,High
+Unreal Engine Developer,unreal engine c++ blueprints game development 3d rendering animation,$90k - $139k,High
+Technical Lead,team leadership architecture code review mentoring agile software development strategy,$114k - $158k,High
+Engineering Manager,engineering management team building performance reviews hiring agile delivery,$89k - $109k,High
+Scrum Master,scrum agile facilitation sprint planning retrospectives team coaching,$118k - $153k,High
+Release Manager,release management ci cd deployment versioning coordination change management,$145k - $165k,High
+IT Support Specialist,troubleshooting hardware software networking helpdesk customer support technical issues,$141k - $181k,High
+Desktop Support Engineer,windows macos linux troubleshooting hardware repair software installation,$68k - $99k,High
+Help Desk Analyst,customer support ticketing troubleshooting technical assistance escalation,$150k - $183k,Medium
+Linux System Administrator,linux bash shell scripting server management networking security automation,$84k - $109k,Medium
+Windows Administrator,windows server active directory group policy powershell administration,$152k - $192k,High
+Mainframe Developer,cobol jcl cics mainframe zos db2 batch processing,$113k - $138k,High
+ERP Consultant,erp implementation business process oracle sap configuration modules integration,$117k - $158k,High
+CRM Developer,crm salesforce hubspot dynamics customer relationship management integration,$109k - $138k,High
+SharePoint Developer,sharepoint office 365 power automate spfx web parts collaboration,$154k - $202k,High
+ServiceNow Developer,servicenow itsm itil workflow scripting integration platform,$97k - $132k,High
+RPA Developer,robotic process automation uipath blue prism automation anywhere process mining,$63k - $90k,High
+Chatbot Developer,chatbot nlp dialogflow rasa conversational ai intent recognition,$129k - $163k,High
+Voice UI Developer,voice user interface alexa google assistant speech recognition nlu,$84k - $109k,Medium
+Accessibility Engineer,web accessibility wcag aria screen readers inclusive design testing,$126k - $164k,High
+Performance Engineer,load testing performance tuning jmeter scalability optimization monitoring,$113k - $137k,High
+Chaos Engineer,chaos engineering resilience testing fault injection reliability distributed systems,$107k - $142k,High
+GraphQL Developer,graphql schema design resolvers subscriptions api development apollo federation,$121k - $156k,High
+Microservices Architect,microservices architecture service mesh api gateway distributed systems event driven,$153k - $199k,High
+Event-Driven Architect,event driven architecture kafka rabbitmq event sourcing cqrs messaging,$70k - $107k,Low
+Streaming Data Engineer,real-time data streaming kafka flink kinesis event processing analytics,$66k - $114k,Low
+3D Artist,3d modeling texturing rendering blender maya animation visualization,$149k - $180k,High
+Motion Graphics Designer,after effects motion graphics animation video production visual effects,$92k - $138k,Medium
+Video Editor,video editing premiere pro final cut storytelling post production color grading,$109k - $129k,High
+Audio Engineer,audio processing mixing mastering signal processing acoustics recording,$77k - $107k,High
+Digital Marketing Analyst,seo sem google analytics social media marketing digital strategy ppc,$157k - $181k,High
+SEO Specialist,search engine optimization keyword research link building on page seo technical seo,$94k - $127k,High
+Content Strategist,content strategy editorial planning content marketing audience analysis brand voice,$151k - $199k,Low
+Growth Hacker,growth hacking analytics ab testing user acquisition conversion optimization retention,$156k - $206k,Medium
+E-commerce Developer,shopify magento woocommerce e-commerce payment integration inventory management,$107k - $151k,High
+Supply Chain Analyst,supply chain logistics inventory forecasting optimization erp data analysis,$81k - $107k,Medium
+Healthcare IT Specialist,ehr hl7 fhir healthcare informatics hipaa clinical systems integration,$90k - $124k,Medium
+EdTech Developer,learning management systems education technology e-learning course design accessibility,$133k - $173k,High
+FinTech Developer,financial technology payments blockchain regulatory compliance api banking,$70k - $98k,High
+LegalTech Developer,legal technology contract analysis document management compliance automation,$73k - $103k,High
+GIS Developer,geographic information systems mapping spatial analysis arcgis qgis geodatabase,$88k - $130k,High
+Drone Engineer,drone technology uav flight planning autonomous systems computer vision sensors,$154k - $181k,Medium
+Autonomous Vehicle Engineer,self-driving cars lidar sensor fusion path planning deep learning autonomous systems,$155k - $180k,Low
+Climate Data Scientist,climate modeling environmental data analysis python satellite imagery sustainability,$152k - $192k,High
